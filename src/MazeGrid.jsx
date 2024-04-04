@@ -17,7 +17,9 @@ export default function MazeGrid({ width = 20, height = 20 }) {
           row.map((cell, cellIndex) => {
             if (rowIndex === y && cellIndex === x) {
               if (cell === "end") {
-                window.alert("Success");
+                window.alert(
+                  `Success! End is at cell [${cellIndex}, ${rowIndex}]`,
+                );
               }
               return cell === "end" ? "end" : "visited";
             }
